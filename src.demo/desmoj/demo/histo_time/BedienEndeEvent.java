@@ -41,6 +41,9 @@ public class BedienEndeEvent extends Event<KundeEntity> {
                 new BedienEndeEvent (meinModel, "Bedienung Ende", true);
             // eintragen in Ereignisliste
             bedienEnde.schedule(naechsterKunde, new TimeSpan(meinModel.getBedienZeit()));
+
+            meinModel.warteschlangeZeitreihe.update(meinModel.kundenReiheQueue.length());
+
         }
         else {
             // kein Kunde wartet

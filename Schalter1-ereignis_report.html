@@ -36,7 +36,7 @@
 <hr><div align="center"><h3>TimeSeries</h3></div>
 <table border="0" cellspacing="0" cellpadding="3" width="100%">
 <tr valign="top"><td><b><div align="left">Title</div></b></td><td><b><div align="left">(Re)set</div></b></td><td><b><div align="left">Start</div></b></td><td><b><div align="left">End</div></b></td><td><b><div align="left">Obs</div></b></td><td><b><div align="left">First</div></b></td><td><b><div align="left">Last</div></b></td><td><b><div align="left">Min</div></b></td><td><b><div align="left">Max</div></b></td><td><b><div align="left">Group</div></b></td><td><b><div align="left">Color</div></b></td></tr>
-<tr valign="top"><td>Warteschlange Zeitreihe</td><td>0.0000</td><td>0.0</td><td>240.0</td><td>2</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td><td>default</td><td width="20" bgcolor="#000000"></td></tr>
+<tr valign="top"><td>Warteschlange Zeitreihe</td><td>0.0000</td><td>0.0</td><td>240.0</td><td>46</td><td>0.0</td><td>39.0</td><td>0.0</td><td>39.0</td><td>default</td><td width="20" bgcolor="#000000"></td></tr>
 </table><p></p>
 <div align="center">
 <canvas id="timeSeriesCanvas0" width="500" height="350">
@@ -91,8 +91,8 @@ function drawYAxis() {
 }
 
 function drawYScale() {
-	var yScale = 1.0;
-	var numOfYScale = 1;
+	var yScale = 5.0;
+	var numOfYScale = 8;
 	var chartHeight = 280;
 	var chartWidth = 420;
 
@@ -118,14 +118,14 @@ function drawYScale() {
 }
 
 function drawTimeSeries() {
-	var dataValues = [[1.0, 1.0]];
-	var timeValues = [[6.65431, 10.41666]];
+	var dataValues = [[0.0, 0.0, 1.0, 3.0, 4.0, 3.0, 9.0, 8.0, 7.0, 9.0, 10.0, 11.0, 12.0, 14.0, 13.0, 13.0, 16.0, 15.0, 14.0, 16.0, 15.0, 19.0, 20.0, 19.0, 18.0, 23.0, 22.0, 22.0, 23.0, 25.0, 26.0, 27.0, 28.0, 31.0, 30.0, 29.0, 30.0, 31.0, 35.0, 36.0, 37.0, 38.0, 38.0, 39.0, 38.0, 39.0]];
+	var timeValues = [[6.65431, 10.41666, 18.18909, 24.33625, 31.92445, 32.97238, 40.7899, 41.79173, 42.32381, 49.5879, 59.52011, 64.2303, 65.66488, 71.6322, 73.29716, 75.10273, 80.74103, 85.37448, 87.23356, 90.212, 93.81241, 103.38761, 112.27784, 114.76582, 116.84631, 123.60699, 124.47342, 127.92086, 137.29395, 146.17794, 151.24713, 157.4325, 161.51066, 167.21642, 169.06579, 171.30214, 178.76475, 185.76752, 194.3184, 198.7361, 207.10016, 216.53761, 225.58057, 232.27194, 235.97194, 238.2557]];
 	var colors = ['#000000'];
 	var startXScale = 0.0;
 	var xScale = 24.0;
 	var numOfXScale = 10;
-	var yScale = 1.0;
-	var numOfYScale = 1;
+	var yScale = 5.0;
+	var numOfYScale = 8;
 	var chartHeight = 280;
 	var chartWidth = 420;
 
@@ -210,5 +210,5 @@ function toRad(x) {
 <tr valign="top"><td>Ankunftszeitintervall</td><td>0.0000</td><td>173</td><td>Cont Exponential</td><td>3.0</td><td> </td><td> </td><td>9829105</td></tr>
 </table><p></p>
 <font size="-1"><a href="#top">top</a></font><p></p>
-<font size="-2">created using <a href="http://www.desmoj.de">DESMO-J</A> Version 2.5.1d at Mon May 01 19:57:12 CEST 2023 - DESMO-J is licensed under <A HREF=http://www.apache.org/licenses/LICENSE-2.0>Apache License, Version 2.0</A></font>
+<font size="-2">created using <a href="http://www.desmoj.de">DESMO-J</A> Version 2.5.1d at Mon May 01 20:28:01 CEST 2023 - DESMO-J is licensed under <A HREF=http://www.apache.org/licenses/LICENSE-2.0>Apache License, Version 2.0</A></font>
 </body></html>

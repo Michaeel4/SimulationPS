@@ -65,7 +65,7 @@ public class KundenAnkunftEvent extends Event<KundeEntity> {
 
             // Update Histogram
             meinModel.waitTimeHistogram.update(waitTime);
-            meinModel.warteschlangeZeitreihe.update(meinModel.besetzteSchalterQueue.length());
+            meinModel.warteschlangeZeitreihe.update(meinModel.kundenReiheQueue.length());
         }
     }
 }
