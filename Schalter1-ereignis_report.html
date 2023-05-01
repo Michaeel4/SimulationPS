@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Author" content="Tim Lechler">
+<meta name="GENERATOR" content="DESMO-J 2.5.1d">
+<title>./Schalter1-ereignis_report.html</title></head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+<a name="top"></a><br />
+<p></p><h2><div align="center">Schalter1-ereignis Report</div></h2><p></p><div align="center"><h3>Model Schalter Modell</h3></div>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+<tr valign="top"><td><b><div align="left">Description</div></b></td></tr>
+<tr valign="top"><td>Schalter1_e Modell (Ereignis orientiert):simuliert einen Bankschalter, wo ankommende Kunden zuerst in einer Warteschlange eingereiht werden. Wenn der Schalter frei ist, werden sie bedient.</td></tr>
+</table><p></p>
+<font size="-1"><a href="#top">top</a></font><p></p>
+<hr><div align="center"><h3>Simulation Run</h3></div>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+<tr valign="top"><td><b><div align="left">Property</div></b></td><td><b><div align="left">Content</div></b></td></tr>
+<tr valign="top"></tr>
+<tr valign="top"><td>Simulation duration</td><td>Experiment run from 0.0000 until 480.0000.</td></tr>
+<tr valign="top"><td>Computation duration (HH:MM:SS)</td><td>00:00:00</td></tr>
+<tr valign="top"><td>Resets</td><td>No resets during the experiment run.</td></tr>
+<tr valign="top"><td>Seed</td><td>979</td></tr>
+<tr valign="top"><td>Errors</td><td>No errors or warnings have occurred.</td></tr>
+</table><p></p>
+<font size="-1"><a href="#top">top</a></font><p></p>
+<hr><div align="center"><h3>Histograms</h3></div>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+<tr valign="top"><td><b><div align="left">Title</div></b></td><td><b><div align="left">(Re)set</div></b></td><td><b><div align="left">Obs</div></b></td><td><b><div align="left">Mean</div></b></td><td><b><div align="left">Std.Dev</div></b></td><td><b><div align="left">Min</div></b></td><td><b><div align="left">Max</div></b></td><td><b><div align="left">Unit</div></b></td></tr>
+<tr valign="top"><td>Wartezeiten-Histogramm</td><td>0.0000</td><td>2</td><td>3.53548</td><td>2.66038</td><td>1.65431</td><td>5.41666</td><td>none</td></tr>
+</table><p></p>
+<div align="center"><h3> </h3></div>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+<tr valign="top"><td>Insufficient data for displaying histogram statistics</td></tr>
+</table><p></p>
+<font size="-1"><a href="#top">top</a></font><p></p>
+<hr><div align="center"><h3>TimeSeries</h3></div>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+<tr valign="top"><td><b><div align="left">Title</div></b></td><td><b><div align="left">(Re)set</div></b></td><td><b><div align="left">Start</div></b></td><td><b><div align="left">End</div></b></td><td><b><div align="left">Obs</div></b></td><td><b><div align="left">First</div></b></td><td><b><div align="left">Last</div></b></td><td><b><div align="left">Min</div></b></td><td><b><div align="left">Max</div></b></td><td><b><div align="left">Group</div></b></td><td><b><div align="left">Color</div></b></td></tr>
+<tr valign="top"><td>Warteschlange Zeitreihe</td><td>0.0000</td><td>0.0</td><td>240.0</td><td>2</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td><td>default</td><td width="20" bgcolor="#000000"></td></tr>
+</table><p></p>
+<div align="center">
+<canvas id="timeSeriesCanvas0" width="500" height="350">
+Your browser is not able to display this graphic.<br />
+This could be because it does not support the canvas-Element by html5<noscript> or because it does not support JavaScript</noscript>.
+</canvas>
+</div><p></p>
+<script type="text/javascript">
+<!--
+var myCanvas = document.getElementById('timeSeriesCanvas0');
+var myContext = myCanvas.getContext('2d');
+
+myContext.strokeStyle = '#000000';
+drawXScale();
+drawYScale();
+drawXAxis();
+drawYAxis();
+drawTimeSeries();
+
+myContext.strokeRect(0, 0, myCanvas.width, myCanvas.height);
+
+function drawXAxis() {
+	myContext.beginPath();
+	myContext.moveTo(60, myCanvas.height-50);
+	myContext.lineTo(myCanvas.width-20, myCanvas.height-50);
+	myContext.stroke();
+	myContext.closePath();
+
+	myContext.save();
+	myContext.textAlign = 'center';
+	myContext.textBaseline = 'bottom';
+	myContext.font = 'bold 8pt Georgia';
+	myContext.fillText('time', 270, 340);
+	myContext.restore();
+}
+
+function drawYAxis() {
+	myContext.beginPath();
+	myContext.moveTo(60, 20);
+	myContext.lineTo(60, myCanvas.height-50);
+	myContext.stroke();
+	myContext.closePath();
+
+	myContext.save();
+	myContext.translate(0, myCanvas.height);
+	myContext.rotate(toRad(270));
+	myContext.textAlign = 'center';
+	myContext.textBaseline = 'top';
+	myContext.font = 'bold 8pt Georgia';
+	myContext.fillText('value', 190, 10);
+	myContext.restore();
+}
+
+function drawYScale() {
+	var yScale = 1.0;
+	var numOfYScale = 1;
+	var chartHeight = 280;
+	var chartWidth = 420;
+
+	myContext.save();
+	myContext.strokeStyle = '#bebebe';
+	for (var i=1; numOfYScale>=i; i++) {
+		myContext.beginPath();
+		myContext.moveTo(xToCanvasCoordinate(0-5), yToCanvasCoordinate(i*chartHeight/numOfYScale));
+		myContext.lineTo(xToCanvasCoordinate(chartWidth),  yToCanvasCoordinate(i*chartHeight/numOfYScale));
+		myContext.stroke();
+		myContext.closePath();
+	}
+	myContext.restore();
+
+	myContext.save();
+	myContext.textAlign = 'right';
+	myContext.textBaseline = 'middle';
+	for (var i=0; numOfYScale>=i; i++) {
+		var scaleText = i*yScale;
+		myContext.fillText(scaleText, 50, yToCanvasCoordinate(i*chartHeight/numOfYScale));
+	}
+	myContext.restore();
+}
+
+function drawTimeSeries() {
+	var dataValues = [[1.0, 1.0]];
+	var timeValues = [[6.65431, 10.41666]];
+	var colors = ['#000000'];
+	var startXScale = 0.0;
+	var xScale = 24.0;
+	var numOfXScale = 10;
+	var yScale = 1.0;
+	var numOfYScale = 1;
+	var chartHeight = 280;
+	var chartWidth = 420;
+
+	myContext.save();
+	for (var i=0; dataValues.length>i; i++) {
+		var data = dataValues[i];
+		var time = timeValues[i]
+		var xCoor = (time[0]-startXScale) * chartWidth/(xScale*numOfXScale);
+		var yCoor = data[0] * chartHeight/(yScale*numOfYScale);
+
+		myContext.strokeStyle = colors[i];
+		myContext.beginPath();
+		myContext.moveTo(xToCanvasCoordinate(xCoor), yToCanvasCoordinate(yCoor));
+		for (var j=1; data.length>j; j++) {
+			var newXCoor = (time[j] - startXScale) * chartWidth/(xScale*numOfXScale);
+			var newYCoor = data[j] * chartHeight/(yScale*numOfYScale);
+			myContext.lineTo(xToCanvasCoordinate(newXCoor), yToCanvasCoordinate(yCoor));
+			myContext.lineTo(xToCanvasCoordinate(newXCoor), yToCanvasCoordinate(newYCoor));
+			xCoor = newXCoor;
+			yCoor = newYCoor;
+		}
+		myContext.stroke();
+		myContext.closePath();
+	}
+	myContext.restore();
+}
+
+function drawXScale() {
+	var startXScale = 0.0;
+	var xScale = 24.0;
+	var numOfXScale = 10;
+	var chartHeight = 280;
+	var chartWidth = 420;
+
+	myContext.save();
+	myContext.strokeStyle = '#bebebe';
+	for (var i=0; numOfXScale>=i; i++) {
+		myContext.beginPath();
+		myContext.moveTo(xToCanvasCoordinate(i*chartWidth/numOfXScale), yToCanvasCoordinate(0-5));
+		myContext.lineTo(xToCanvasCoordinate(i*chartWidth/numOfXScale),  yToCanvasCoordinate(chartHeight));
+		myContext.stroke();
+		myContext.closePath();
+	}
+	myContext.restore();
+
+	myContext.save();
+	myContext.textAlign = 'center';
+	myContext.textBaseline = 'top';
+	for (var i=0; numOfXScale>=i; i++) {
+		var scaleText = i*xScale + startXScale;
+		myContext.fillText(scaleText, xToCanvasCoordinate(i*chartWidth/numOfXScale), 310);
+	}
+	myContext.restore();
+}
+
+function xToCanvasCoordinate(xCoordinate) {
+	return 60 + xCoordinate;
+}
+
+function yToCanvasCoordinate(yCoordinate) {
+	return myCanvas.height-50 - yCoordinate;
+}
+
+function toRad(x) {
+	return (x*Math.PI)/180;
+};
+//-->
+</script>
+<font size="-1"><a href="#top">top</a></font><p></p>
+<hr><div align="center"><h3>Queues</h3></div>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+<tr valign="top"><td><b><div align="left">Title</div></b></td><td><b><div align="left">Qorder</div></b></td><td><b><div align="left">(Re)set</div></b></td><td><b><div align="left">Obs</div></b></td><td><b><div align="left">QLimit</div></b></td><td><b><div align="left">Qmax</div></b></td><td><b><div align="left">Qnow</div></b></td><td><b><div align="left">Qavg.</div></b></td><td><b><div align="left">Zeros</div></b></td><td><b><div align="left">max.Wait</div></b></td><td><b><div align="left">avg.Wait</div></b></td><td><b><div align="left">refus.</div></b></td></tr>
+<tr valign="top"><td>Kunden-Warteschlange</td><td>FIFO</td><td>0.0000</td><td>89</td><td>unlimit.</td><td>83</td><td>83</td><td>42.12787</td><td>2</td><td>228.5374</td><td>114.0100</td><td>0</td></tr>
+<tr valign="top"><td>freie Schalter WS</td><td>FIFO</td><td>0.0000</td><td>2</td><td>unlimit.</td><td>1</td><td>0</td><td>0.01988</td><td>0</td><td>6.6543</td><td>4.7715</td><td>0</td></tr>
+<tr valign="top"><td>besetzte Schalter WS</td><td>FIFO</td><td>0.0000</td><td>1</td><td>unlimit.</td><td>1</td><td>1</td><td>0.98012</td><td>0</td><td>0.8735</td><td>0.8735</td><td>0</td></tr>
+</table><p></p>
+<font size="-1"><a href="#top">top</a></font><p></p>
+<hr><div align="center"><h3>Distributions</h3></div>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+<tr valign="top"><td><b><div align="left">Title</div></b></td><td><b><div align="left">(Re)set</div></b></td><td><b><div align="left">Obs</div></b></td><td><b><div align="left">Type</div></b></td><td><b><div align="left">Parameter 1</div></b></td><td><b><div align="left">Parameter 2</div></b></td><td><b><div align="left">Parameter 3</div></b></td><td><b><div align="left">Seed</div></b></td></tr>
+<tr valign="top"><td>Bedienzeiten</td><td>0.0000</td><td>89</td><td>Cont Uniform</td><td>0.5</td><td>10.0</td><td> </td><td>68994544</td></tr>
+<tr valign="top"><td>Ankunftszeitintervall</td><td>0.0000</td><td>173</td><td>Cont Exponential</td><td>3.0</td><td> </td><td> </td><td>9829105</td></tr>
+</table><p></p>
+<font size="-1"><a href="#top">top</a></font><p></p>
+<font size="-2">created using <a href="http://www.desmoj.de">DESMO-J</A> Version 2.5.1d at Mon May 01 19:57:12 CEST 2023 - DESMO-J is licensed under <A HREF=http://www.apache.org/licenses/LICENSE-2.0>Apache License, Version 2.0</A></font>
+</body></html>
